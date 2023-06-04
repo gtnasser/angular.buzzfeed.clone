@@ -1,0 +1,26 @@
+<div class="quizz-container">
+
+    <div class="quizz-logo">
+        <img src="assets/imgs/logo.png" alt="" srcset="">
+        <br>
+        <h1>{{title}}</h1>
+    </div>
+
+    <ng-container *ngIf=!finished>
+
+        <div class="quizz-questions">
+            <h3>{{questionIndex+1}}/{{questionMaxIndex}} - {{questionsSelected.question}}</h3>
+        </div>
+
+        <div class="quizz-options">
+            <button *ngFor="let option of questionsSelected.options; let i=index" (click)="playerChoice(option.alias)"
+                class="btn-option">{{option.name}}</button>
+        </div>
+
+    </ng-container>
+
+    <div *ngIf=finished class="quizz-results">
+        <h2>{{answerSelected}}</h2>
+    </div>
+
+</div>

@@ -13,7 +13,7 @@ git clone http://github.com/gtnasser/angular.buzzfeed.clone
 cd angular.buzzfeed.clone
 
 # instale as dependências
-npm -install
+npm install
 
 # execute a aplicação
 ng serve --open
